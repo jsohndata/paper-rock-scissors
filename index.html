@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="choices" class="fade-in">
-        <button onclick="handleChoice('✋🏽')">✋🏽</button>
-        <button onclick="handleChoice('✊🏽')">✊🏽</button>
-        <button onclick="handleChoice('✌🏽')">✌🏽</button>
-        <button onclick="handleRandomChoice()">🎲</button>
-    </div>
-    <div id="reveal" class="hidden fade-in">
-        <button onclick="handleReveal()">Reveal</button>
-    </div>
-    <div id="result" class="hidden fade-in"></div>
-    <div id="reset" class="hidden fade-in">
-        <button onclick="handleReset()">Play Again</button>
+    <div id="container">
+        <div id="choices" class="fade-in">
+            <button onclick="handleChoice('✋')">✋</button>
+            <button onclick="handleChoice('✊')">✊</button>
+            <button onclick="handleChoice('✌️')">✌️</button>
+            <button class="random" onclick="handleRandomChoice()">🎲</button>
+        </div>
+        <div id="reveal" class="hidden fade-in">
+            <p>Click to Reveal</p>
+            <button onclick="handleReveal()">Reveal</button>
+        </div>
+        <div id="result" class="hidden fade-in"></div>
+        <div id="reset" class="hidden fade-in">
+            <button onclick="handleReset()">Play Again</button>
+        </div>
     </div>
 
     <script src="script.js"></script>

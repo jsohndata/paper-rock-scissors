@@ -9,7 +9,7 @@ const resetDiv = document.getElementById('reset');
 // Functional approach to setting and getting user choice
 const setUserChoice = (choice) => () => choice;
 const getUserChoice = (userChoice) => userChoice;
-const setRandomChoice = () => () => ['✋🏽', '✊🏽', '✌🏽'][Math.floor(Math.random() * 3)];
+const setRandomChoice = () => () => ['✋', '✊', '✌️'][Math.floor(Math.random() * 3)];
 
 // Update screen utility
 const updateScreen = (hideDiv, showDiv, bgColor) => () => {

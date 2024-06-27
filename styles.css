@@ -24,9 +24,9 @@ body {
 }
 
 button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 24px;
+    padding: 20px 40px;
+    margin: 10px;
+    font-size: 36px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -38,4 +38,10 @@ button:hover {
 #result p {
     font-size: 20px;
     margin: 10px 0;
+}
+
+.result-text {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
 }

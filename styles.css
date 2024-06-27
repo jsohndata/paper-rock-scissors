@@ -18,6 +18,18 @@ body {
     height: 100%;
 }
 
+#choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#choices .random {
+    flex-basis: 100%;
+    text-align: center;
+}
+
 .hidden {
     display: none;
 }

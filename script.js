@@ -20,7 +20,7 @@ const updateScreen = (hideDiv, showDiv, bgColor) => () => {
 
 // Display result utility
 const displayResult = (choice) => () => {
-    resultDiv.innerHTML = `<p>You chose</p><p class='result-text'>${choice}</p>`;
+    resultDiv.innerHTML = `<p class="result-text">You chose: ${choice}</p>`;
 };
 
 // Event handlers

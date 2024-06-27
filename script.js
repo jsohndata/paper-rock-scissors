@@ -9,12 +9,13 @@ const resetDiv = document.getElementById('reset');
 // Functional approach to setting and getting user choice
 const setUserChoice = (choice) => () => choice;
 const getUserChoice = (userChoice) => userChoice;
-const setRandomChoice = () => () => ['Paper', 'Rock', 'Scissors'][Math.floor(Math.random() * 3)];
+const setRandomChoice = () => () => ['✋🏽', '✊🏽', '✌🏽'][Math.floor(Math.random() * 3)];
 
 // Update screen utility
-const updateScreen = (hideDiv, showDiv) => () => {
+const updateScreen = (hideDiv, showDiv, bgColor) => () => {
     hideDiv.classList.add('hidden');
     showDiv.classList.remove('hidden');
+    document.body.style.backgroundColor = bgColor;
 };
 
 // Display result utility
@@ -25,23 +26,23 @@ const displayResult = (choice) => () => {
 // Event handlers
 const handleChoice = (choice) => {
     userChoice = setUserChoice(choice)();
-    updateScreen(choicesDiv, revealDiv)();
+    updateScreen(choicesDiv, revealDiv, 'pink')();
 };
 
 const handleRandomChoice = () => {
     userChoice = setRandomChoice()();
-    updateScreen(choicesDiv, revealDiv)();
+    updateScreen(choicesDiv, revealDiv, 'pink')();
 };
 
 const handleReveal = () => {
     displayResult(getUserChoice(userChoice))();
-    updateScreen(revealDiv, resultDiv)();
+    updateScreen(revealDiv, resultDiv, 'yellow')();
     resetDiv.classList.remove('hidden');
 };
 
 const handleReset = () => {
     userChoice = '';
-    updateScreen(resultDiv, choicesDiv)();
+    updateScreen(resultDiv, choicesDiv, '#f0f0f0')();
     resultDiv.classList.add('hidden');
     resetDiv.classList.add('hidden');
 };

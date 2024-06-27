@@ -44,12 +44,8 @@ button:hover {
 }
 
 #result p {
-    font-size: 1.25rem;
-    margin: 0.625rem 0;
-}
-
-.result-text {
     font-size: 5.0rem;
     font-weight: bold;
     text-align: center;
+    margin: 0.625rem 0;
 }

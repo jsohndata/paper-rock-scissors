@@ -1,3 +1,5 @@
+let userChoice = '';
+
 // Select DOM elements
 const choicesDiv = document.getElementById('choices');
 const revealDiv = document.getElementById('reveal');
@@ -44,11 +46,8 @@ const handleReset = () => {
     resetDiv.classList.add('hidden');
 };
 
-// Attach event handlers to buttons
-document.querySelectorAll('#choices button').forEach(button => {
-    button.addEventListener('click', () => handleChoice(button.innerText));
-});
-
-document.querySelector('#choices button:last-child').addEventListener('click', handleRandomChoice);
-document.querySelector('#reveal button').addEventListener('click', handleReveal);
-document.querySelector('#reset button').addEventListener('click', handleReset);
+// Export functions to make them available globally
+window.handleChoice = handleChoice;
+window.handleRandomChoice = handleRandomChoice;
+window.handleReveal = handleReveal;
+window.handleReset = handleReset;
